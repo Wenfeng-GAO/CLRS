@@ -1,7 +1,7 @@
-CLRS
+Introduction to Algorithms
 ====
 
-This is the code realizations of the Introduction To Algorithms 3rd Edition by CLRS.
+This is the code realizations of the Introduction to Algorithms 3rd Edition by CLRS.
 ===
 
 I am a biginner in algorithms, this is my answers to the text book exercises mainly.
