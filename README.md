@@ -14,7 +14,7 @@ Also, feel free to contact me if you find better solutions or something wrong wi
 
 #####Oct 11, 2014
 	- Project started.
-	- Add solutions to [chapiter 2](https://github.com/Wenfeng-GAO/CLRS/tree/master/chapter02).
+	- Add solutions to [chapiter 2](https://www.github.com/) .
         
 To be continued...
 
