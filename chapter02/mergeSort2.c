@@ -7,7 +7,7 @@ void merge(int suite[], int p, int q, int r) {
 
     for(i = 0; i < n1; i++)
         L[i] = suite[p+i];
-    for(i = 0; i <= n2; i++)
+    for(i = 0; i < n2; i++)
         R[i] = suite[q+1+i];
 
     i = j = 0;
