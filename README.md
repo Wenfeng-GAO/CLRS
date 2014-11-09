@@ -3,7 +3,7 @@
 ###This is the code realizations of the *Introduction to Algorithms 3rd Edition* by CLRS.
 
 ===
-I am a biginner in algorithms, this is my answers to the text book exercises mainly.
+I am a beginner in algorithms, this is my answers to the text book exercises mainly.
 
 If you are interested in this project, don't hasitate to join me.
 
