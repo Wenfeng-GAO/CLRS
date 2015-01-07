@@ -169,7 +169,7 @@ int main() {
     clock_t begin, end;
     double time_spent;
     
-    // generate_array(A);
+    generate_array(A);
     int A[LIST_LEN];
     generate_array(A);
     printf("\n");
