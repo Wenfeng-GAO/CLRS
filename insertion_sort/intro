@@ -1,0 +1,14 @@
+INSERTION_SORT
+
+[INTRO]
+Just like inserting the cards on the table to the left hand one by one. Comparing from right to left with each card on the left hand which has already been ordered, then insert it in the right place.
+Here, we compare A[j] (from right to left) with each one in an ordered array A[1..j-1], until find the right place.
+
+[PSEUDOCODE]
+for j = 2 to A.length
+    key = A[j]
+    i = j - 1
+    while i > 0 and A[i] > key
+        A[i+1] = A[i]
+        i = i - 1
+    A[i+1] = key
