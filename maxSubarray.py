@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 
-def maxSubArray(list):
-	size = len(list)
+def maxSubArray(list, start, end):
+        if start == end:
+		return (start, start, list[start])
 
-	if size == 1:
-		return (0, 0, list[0])
+        mid = (end + start) / 2
 
-	leftStart, leftEnd, leftValue = maxSubArray(list[:size/2])
-	rightStart, rightEnd, rightValue = maxSubArray(list[size/2:])
-	crossStart, crossEnd, crossValue = cross(list)
+	leftStart, leftEnd, leftValue = maxSubArray(list, start, mid)
+	rightStart, rightEnd, rightValue = maxSubArray(list, mid+1, end)
+	crossStart, crossEnd, crossValue = cross(list, start, mid, end)
 
 	if leftValue >= rightValue and leftValue >= crossValue:
 		return (leftStart, leftEnd, leftValue)
@@ -17,31 +17,23 @@ def maxSubArray(list):
 	else:
 		return (crossStart, crossEnd, crossValue)
 
-def cross(list):
-	mid = len(list) / 2
-	print "mid", mid
-	print list
-
-	start, end, s = mid, mid, 0
-	
-	leftValue = list[mid]
-	for i in range(mid, -1, -1):
+def cross(list, start, mid, end):
+        s, leftIndex, leftValue = 0, mid, list[mid]
+	for i in range(mid, start-1, -1):
 		s += list[i]
-		print "s", s
 		if s > leftValue:
-			start, leftValue = i, s
-			print start, leftValue
+			leftIndex, leftValue = i, s
 
-	s, rightValue = 0, list[mid]
-	for i in range(mid, len(list)):
+	s, rightIndex, rightValue = 0, mid, list[mid]
+	for i in range(mid, end+1):
 		s += list[i]
 		if s > rightValue:
-			end, rightValue = i, s
+			rightIndex, rightValue = i, s
 
 	return start, end, leftValue + rightValue - list[mid]
 
 
 list = [0,0,1,1,2]
-start, end, value = maxSubArray(list)
+start, end, value = maxSubArray(list, 0, len(list)-1)
 
 print "From", start, "to", end, ":", value
